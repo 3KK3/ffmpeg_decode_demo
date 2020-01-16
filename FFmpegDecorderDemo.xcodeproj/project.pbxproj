@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BCC0900223CF3E60003D7D37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC0900123CF3E60003D7D37 /* AppDelegate.m */; };
-		BCC0900823CF3E60003D7D37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC0900723CF3E60003D7D37 /* ViewController.m */; };
+		BCC0900823CF3E60003D7D37 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BCC0900723CF3E60003D7D37 /* ViewController.mm */; };
 		BCC0900B23CF3E60003D7D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC0900923CF3E60003D7D37 /* Main.storyboard */; };
 		BCC0900D23CF3E61003D7D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC0900C23CF3E61003D7D37 /* Assets.xcassets */; };
 		BCC0901023CF3E61003D7D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC0900E23CF3E61003D7D37 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		BCC0908B23CF3ED0003D7D37 /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC0908A23CF3ED0003D7D37 /* libffmpeg.a */; };
 		BCC0908F23CF404E003D7D37 /* accompany_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCC0908D23CF404E003D7D37 /* accompany_decoder.cpp */; };
 		BCC0909223CF4861003D7D37 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC0909123CF4828003D7D37 /* libiconv.2.4.0.tbd */; };
+		BCC0909523D047E4003D7D37 /* accomplay_decoder_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCC0909323D047E4003D7D37 /* accomplay_decoder_controller.cpp */; };
+		BCC0909923D04C92003D7D37 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC0909823D04C92003D7D37 /* CommonUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		BCC0900023CF3E60003D7D37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCC0900123CF3E60003D7D37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BCC0900623CF3E60003D7D37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BCC0900723CF3E60003D7D37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCC0900723CF3E60003D7D37 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		BCC0900A23CF3E60003D7D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCC0900C23CF3E61003D7D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCC0900F23CF3E61003D7D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,6 +136,10 @@
 		BCC0908D23CF404E003D7D37 /* accompany_decoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = accompany_decoder.cpp; sourceTree = "<group>"; };
 		BCC0908E23CF404E003D7D37 /* accompany_decoder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = accompany_decoder.hpp; sourceTree = "<group>"; };
 		BCC0909123CF4828003D7D37 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		BCC0909323D047E4003D7D37 /* accomplay_decoder_controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = accomplay_decoder_controller.cpp; sourceTree = "<group>"; };
+		BCC0909423D047E4003D7D37 /* accomplay_decoder_controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = accomplay_decoder_controller.hpp; sourceTree = "<group>"; };
+		BCC0909723D04C92003D7D37 /* CommonUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		BCC0909823D04C92003D7D37 /* CommonUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,13 +193,14 @@
 		BCC08FFF23CF3E60003D7D37 /* FFmpegDecorderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BCC0909623D04C79003D7D37 /* Utils */,
 				BCC0908C23CF3EFA003D7D37 /* Decoder */,
 				BCC0903723CF3ED0003D7D37 /* ffmpeg */,
 				BCC0903523CF3EC2003D7D37 /* 131.aac */,
 				BCC0900023CF3E60003D7D37 /* AppDelegate.h */,
 				BCC0900123CF3E60003D7D37 /* AppDelegate.m */,
 				BCC0900623CF3E60003D7D37 /* ViewController.h */,
-				BCC0900723CF3E60003D7D37 /* ViewController.m */,
+				BCC0900723CF3E60003D7D37 /* ViewController.mm */,
 				BCC0900923CF3E60003D7D37 /* Main.storyboard */,
 				BCC0900C23CF3E61003D7D37 /* Assets.xcassets */,
 				BCC0900E23CF3E61003D7D37 /* LaunchScreen.storyboard */,
@@ -372,6 +379,8 @@
 			children = (
 				BCC0908E23CF404E003D7D37 /* accompany_decoder.hpp */,
 				BCC0908D23CF404E003D7D37 /* accompany_decoder.cpp */,
+				BCC0909423D047E4003D7D37 /* accomplay_decoder_controller.hpp */,
+				BCC0909323D047E4003D7D37 /* accomplay_decoder_controller.cpp */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -382,6 +391,15 @@
 				BCC0909123CF4828003D7D37 /* libiconv.2.4.0.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCC0909623D04C79003D7D37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCC0909723D04C92003D7D37 /* CommonUtil.h */,
+				BCC0909823D04C92003D7D37 /* CommonUtil.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,9 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC0900823CF3E60003D7D37 /* ViewController.m in Sources */,
+				BCC0909523D047E4003D7D37 /* accomplay_decoder_controller.cpp in Sources */,
+				BCC0900823CF3E60003D7D37 /* ViewController.mm in Sources */,
 				BCC0900223CF3E60003D7D37 /* AppDelegate.m in Sources */,
 				BCC0908F23CF404E003D7D37 /* accompany_decoder.cpp in Sources */,
+				BCC0909923D04C92003D7D37 /* CommonUtil.m in Sources */,
 				BCC0901323CF3E61003D7D37 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -93,7 +93,7 @@ private:
     // 对容器或者说媒体文件层次的抽象，包含多路流（音频流、视频流、字幕流等）
     AVFormatContext *avFormatContext;
     // 描述每一路流的编码格式 包含在一个AVStream里面 ，可以根据此打开编解码器，完成AVFrame和AVPacket直接的转换（编、解码）
-    AVCodecContext *avCondecContext;
+    AVCodecContext *avCodecContext;
     int stream_index;
     float timeBase;
     //编、解码器输入输出部分中  原始数据的抽象
@@ -108,7 +108,7 @@ private:
     
     // 每次解码出来的audioBuffer以及这个audioBuffer的时间戳 以及当前类对于这个audiioBuffer的操作情况 👇
     short *audioBuffer;
-    float positon;
+    float position;
     int audioBufferCursor;
     int audioBufferSize;
     float duration;
@@ -148,7 +148,7 @@ public:
     
     bool hasSeekReq() {
         return seek_req;
-    };
+    }
     
     bool hasSeekResp() {
         return seek_resp;
@@ -168,7 +168,7 @@ public:
             actualSeekPosition = -1;
         }
         return ret;
-    };
+    }
 
     virtual void seek_frame();
 };
